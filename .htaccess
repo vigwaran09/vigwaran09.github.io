@@ -1,24 +1,19 @@
-AddType application/x-javascript .jsgz
-AddType application/wasm .wasmgz
-AddType text/plain .symbolsgz
-AddType application/octet-stream .memgz
-AddType text/css .cssgz
-AddType text/html .htmlgz  
-# NOTE: .data is NOT compressed
-AddType application/octet-stream .data
-
-RewriteEngine on
-# If client accepts compressed files
-RewriteCond %{HTTP:Accept-Encoding} gzip
-# and if compressed file exists
-RewriteCond %{REQUEST_FILENAME}gz -f
-# send .ext.gz instead of .ext
-RewriteRule ^(.+)\.(js|wasm|symbols|mem)$ $1.$2gz
-RewriteRule ^(.+)\.(html|css|js|data)$ $1.$2gz [L] 
-AddEncoding gzip .jsgz
-AddEncoding gzip .wasmgz
-AddEncoding gzip .symbolsgz
-AddEncoding gzip .memgz
-
-AddEncoding gzip .datagz
-
+ AddType application/x-javascript .jsgz    
+ AddType application/octet-stream .datagz
+ AddType application/wasm .wasm
+ AddType application/wasm .wasmgz
+ 
+ RewriteEngine on 
+ # If client accepts compressed files 
+ RewriteCond %{HTTP:Accept-Encoding} gzip 
+ # and if compressed file exists 
+ RewriteCond %{REQUEST_FILENAME}gz -f 
+ # send .extgz instead of .ext 
+ RewriteRule ^(.+)\.(mem|js|data|symbols|wasm)$ $1.$2gz
+ 
+ AddEncoding gzip .jsgz 
+ AddEncoding gzip .datagz
+ AddEncoding gzip .memgz
+ AddEncoding gzip .symbolsgz
+ AddEncoding gzip .wasmgz
+ 
