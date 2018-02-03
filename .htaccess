@@ -1,26 +1,25 @@
- AddType application/x-javascript .jsgz    
- AddType application/octet-stream .datagz
- AddType application/wasm .wasm
- AddType application/wasm .wasmgz
- 
- RewriteEngine on 
- # If client accepts compressed files 
- RewriteCond %{HTTP:Accept-Encoding} gzip 
- # and if compressed file exists 
- RewriteCond %{REQUEST_FILENAME}gz -f 
- # send .extgz instead of .ext 
- RewriteRule ^(.+)\.(mem|js|data|symbols|wasm)$ $1.$2gz
- 
- AddEncoding gzip .jsgz 
- AddEncoding gzip .datagz
- AddEncoding gzip .memgz
- AddEncoding gzip .symbolsgz
- AddEncoding gzip .wasmgz
- 
-RewriteEngine on
-RewriteCond %{HTTP_USER_AGENT} “.*Safari.*” [OR]
-RewriteCond %{HTTP:Accept-Encoding} !gzip
-RewriteRule (.*).jgz$ $1.js [L]
+AddType application/x-javascript .jsgz
+AddType application/wasm .wasmgz
+AddType text/plain .symbolsgz
+AddType application/octet-stream .memgz
+# NOTE: .data is NOT compressed
+AddType application/octet-stream .data
 
-AddType “text/javascript;charset=UTF-8” .jgz
-AddEncoding gzip .jgz
+RewriteEngine on
+ 
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteRule (.*)Release(.*)\.js $1Compressed$2\.jsgz [L]
+RewriteRule (.*)Release(.*)\.data $1Compressed$2\.datagz [L]
+RewriteRule (.*)Release(.*)\.mem $1Compressed$2\.memgz [L]
+RewriteRule (.*)Release(.*)\.unity3d $1Compressed$2\.unity3dgz [L]
+AddEncoding gzip .jsgz
+AddEncoding gzip .datagz
+AddEncoding gzip .memgz
+AddEncoding gzip .unity3dgz
+AddEncoding gzip .jsgz
+AddEncoding gzip .wasmgz
+AddEncoding gzip .symbolsgz
+AddEncoding gzip .memgz
+
+AddEncoding gzip .datagz
+
