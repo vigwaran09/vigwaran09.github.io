@@ -35,3 +35,6 @@ AddEncoding gzip .datagz
 AddEncoding gzip .memgz
 AddEncoding gzip .unity3dgz
 
+<Directory "${vigwaran09.github.io}/htdocs">
+ AddEncoding gzip gz
+</Directory>
