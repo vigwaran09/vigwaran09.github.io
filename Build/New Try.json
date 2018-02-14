@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Basic_Program",
+"dataUrl": "New Try.data.unityweb",
+"asmCodeUrl": "New Try.asm.code.unityweb",
+"asmMemoryUrl": "New Try.asm.memory.unityweb",
+"asmFrameworkUrl": "New Try.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
