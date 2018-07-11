@@ -1,0 +1,14 @@
+{
+	"ClientVersion": "DLC1.0",
+	"BuildUrl": "DLC1.0/Android_ETC2",
+	"files": [
+		{
+			"filename": "szhp_szhpDLC1.0.manifest",
+			"uniqueFilename": "szhp_szhpDLC1.0.manifest",
+			"length": 12241,
+			"URL": "szhp_szhpDLC1.0.manifest",
+			"hash": "048EC2C5812604D3ADE74B71E61AAF573CBC7A30",
+			"hash256": "70E4B39FF217444D5FFE37FC8D845D90CB8A44772020637AEDD2A10135E6B156"
+		}
+	]
+}

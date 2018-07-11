@@ -1,0 +1,14 @@
+{
+	"ClientVersion": "DLC1.0",
+	"BuildUrl": "DLC1.0/Android_PVRTC",
+	"files": [
+		{
+			"filename": "szhp_szhpDLC1.0.manifest",
+			"uniqueFilename": "szhp_szhpDLC1.0.manifest",
+			"length": 12242,
+			"URL": "szhp_szhpDLC1.0.manifest",
+			"hash": "27DA024FFD1B03A4F591054CF9EBDBDEBB9E09A4",
+			"hash256": "8E53BC5F400D0160EDB8B28BEDD19CF8FF2B037A3D2841B6B004EBB6DD2120CE"
+		}
+	]
+}
