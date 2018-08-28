@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        /* Text Overlay */
+        #lab_video_text_overlay h2 {
+            font-size: 4em
+        }
+
+        #lab_video_text_overlay .btn {
+            border-radius: 0;
+            text-transform: uppercase;
+            font-weight: 200;
+        }
+
+        #lab_video_text_overlay .btn-warning {
+            background-color: #F5D328;
+        }
+
+        #lab_video_text_overlay {
+            position: absolute;
+            color: #FFF;
+            width: 100%;
+            top: 25%;
+        }
+
+            #lab_video_text_overlay .container {
+                text-align: center;
+                margin: 0px auto;
+                // background-color: #669900;
+            }
+
+        @media screen and (max-width:991px) {
+            #lab_video_text_wrap {
+                height: 300px;
+            }
+        }
+
+        @media screen and (max-width:650px) {
+            #lab_video_text_wrap {
+                height: 250px;
+            }
+
+            #lab_video_text_overlay h2 {
+                font-size: 2em;
+            }
+
+            #lab_video_text_overlay p {
+                font-size: .9em;
+            }
+        }
+
+        @media only screen and (orientation:portrait) {
+            #container {
+                height: 100vw;
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        }
+
+        @media only screen and (orientation:landscape) {
+            #container {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+
+        #menu {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- reference examples at https://www.idangero.us/swiper/demos/#.Vl8kD9-rRHc -->
+    <section id="lab_video_slider">
+        <div>
+            <div class="container-fluid">
+                <div id="tempBody" class="row">
+                    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+                    <!-- Link Swiper's CSS -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/css/swiper.min.css">
+                    <!-- Swiper -->
+                    <div id="main" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div id="slide_one" class="swiper-slide">
+                                <!-- VIDEO -->
+                                <video class="slider-video" width="100%" preload="auto" loop="" autoplay="" style="visibility: visible; width: 100%;">
+                                    <source src="CARD 1.mp4" type="video/mp4">
+                                </video>
+                                <!-- END VIDEO -->
+                            </div>
+                            <div id="slide_two" class="swiper-slide">
+                                <div id="lab_video_text_overlay">
+                                    <div class="container">
+                                    </div>
+                                </div>
+                                <!-- end #lab_overlay -->
+                                <video class="slider-video" width="100%" preload="auto" loop="" autoplay="" style="visibility: visible; width: 100%;">
+                                    <source src="CARD  2.mp4" type="video/mp4">-=0
+                                </video>
+                            </div>
+                            <div id="slide_three" class="swiper-slide">
+                                <!-- VIDEO -->
+                                <video class="slider-video" width="100%" preload="auto" loop="" autoplay="" style="visibility: visible; width: 100%;">
+                                    <source src="CARD 3.mp4" type="video/mp4">
+                                </video>
+                                <!-- END VIDEO -->
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu">
+                        <!--<input type="image" src="1.png" alt="Submit" width="48" height="48">-->
+                        <button id="close-image1"><img src="img/1.png" width="48" height="48"></button>
+                        <button id="close-image2"><img src="img/2.png" width="48" height="48"></button>
+                        <button id="close-image3"><img src="img/3.png" width="48" height="48"></button>
+                        <button id="close-image4"><img src="img/4.png" width="48" height="48"></button>
+                        <button id="close-image5"><img src="img/5.png" width="48" height="48"></button>
+                        <button id="close-image6"><img src="img/6.png" width="48" height="48"></button>
+                        <button id="close-image7"><img src="img/7.png" width="48" height="48"></button>
+                        <button id="close-image8"><img src="img/8.png" width="48" height="48"></button>
+                        <button id="close-image9"><img src="img/9.png" width="48" height="48"></button>
+                        <button id="close-image10"><img src="img/10.png" width="48" height="48"></button>
+                        <button id="close-image11"><img src="img/11.png" width="48" height="48"></button>
+                        <button id="close-image12"><img src="img/12.png" width="48" height="48"></button>
+                        <button id="close-image13"><img src="img/13.png" width="48" height="48"></button>
+                        <button id="close-image14"><img src="img/14.png" width="48" height="48"></button>
+                        <button id="close-image15"><img src="img/15.png" width="48" height="48"></button>
+                        <button id="close-image16"><img src="img/16.png" width="48" height="48"></button>
+                        <button id="close-image17"><img src="img/17.png" width="48" height="48"></button>
+                        <button id="close-image18"><img src="img/18.png" width="48" height="48"></button>
+                        <button id="close-image19"><img src="img/19.png" width="48" height="48"></button>
+                        <button id="close-image20"><img src="img/20.png" width="48" height="48"></button>
+                    </div>
+                    <!-- Swiper JS -->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/js/swiper.min.js"></script>
+                    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                    <!-- Initialize Swiper -->
+                    <script>
+                        var swiper = new Swiper('.swiper-container', {
+                            pagination: '.swiper-pagination',
+                            paginationClickable: true,
+                            nextButton: '.swiper-button-next',
+                            prevButton: '.swiper-button-prev',
+                            spaceBetween: 30,
+                            autoplayDisableOnInteraction: false
+                        });
+                    </script>
+                    <script>
+                        var myElement = document.getElementById('main');
+                        console.log(myElement);
+                        var mc = new Hammer(myElement);
+
+                        //enable all directions
+                        mc.get('swipe').set({
+                            direction: Hammer.DIRECTION_ALL,
+                            threshold: 1,
+                            velocity: 0.1
+                        });
+
+                        // To check swipe up gesture
+                        mc.on("swipeup swipedown swipeleft swiperight tap press", function (ev) {
+                            if (ev.type === "swipeup") {
+                                $("#menu").fadeIn('5000');
+                            }
+                        });
+
+                        // To check swipe up gesture
+                        mc.on("swipeup swipedown swipeleft swiperight tap press", function (ev) {
+                            if (ev.type === "swipedown") {
+                                $("#menu").fadeOut('5000');
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

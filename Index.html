@@ -1,60 +1,45 @@
+
 <!DOCTYPE html>
+<html lang="en">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("img").load(function(){
-        alert("Image loaded.");
-    });
-});
-</script>
-    <style>
-        #container {
-            display: block;
-        }
-
-        @media only screen and (orientation:portrait) {
-            #container {
-                height: 100vw;
-                -webkit-transform: rotate(90deg);
-                -moz-transform: rotate(90deg);
-                -o-transform: rotate(90deg);
-                -ms-transform: rotate(90deg);
-                transform: rotate(90deg);
-            }
-        }
-
-        @media only screen and (orientation:landscape) {
-            #container {
-                -webkit-transform: rotate(0deg);
-                -moz-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
-                -ms-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-        }
-    </style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body onload="window.location='#myID';">
-    <form id="form1" runat="server">
-        <div id="container">
-            <table id="wrapper" class="page" align="center" border="0" cellpadding="0" cellspacing="0" aria-orientation="horizontal">
-                <tr>
-                    <td>
-                        <video width="1920px" height="1080px" playsinline autoplay muted loop><source src="CARD 1.mp4" type="video/mp4"></video>
-                    </td>
-                    <td>
-                        <video id="myID" width="1920px" height="1080px" playsinline autoplay muted loop><source src="CARD  2.mp4" type="video/mp4"></video>
-                    </td>
-                    <td>
-                        <video width="1920px" height="1080px" playsinline autoplay muted loop><source src="CARD 3.mp4" type="video/mp4"></video>
-                    </td>
-                </tr>
-            </table>
+
+<body>
+
+    <!-- Start your project here-->
+    <div style="height: 100vh">
+        <div class="flex-center flex-column">
+            <h1 class="animated fadeIn mb-4">Material Design for Bootstrap</h1>
+
+            <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
+
+            <p class="animated fadeIn text-muted">MDB Team</p>
         </div>
-    </form>
+    </div>
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
+
 </html>
