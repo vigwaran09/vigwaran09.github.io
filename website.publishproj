@@ -18,9 +18,9 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.30319</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{08ad62e7-ed0b-434e-9dda-10e6f70c670a}</ProjectGuid>
+    <ProjectGuid>{80dd243a-7275-4d03-8e14-66dca5d17095}</ProjectGuid>
     <SourceWebPhysicalPath>$(MSBuildThisFileDirectory)</SourceWebPhysicalPath>
-    <SourceWebVirtualPath>/MDB Free</SourceWebVirtualPath>
+    <SourceWebVirtualPath>/Enoc New</SourceWebVirtualPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SourceWebProject></SourceWebProject>
     <SourceWebMetabasePath></SourceWebMetabasePath>
