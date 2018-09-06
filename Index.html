@@ -8,6 +8,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            var videoOne = document.getElementById('firstVideo');
+            videoOne.pause();
             $("#myModal").modal('show');
         });
     </script>
@@ -39,6 +41,7 @@
         var elem = document.getElementById("firstVideo");
         function openFullscreen() {
             console.log("OpenFullscreen");
+            elem.play();
             elem.webkitRequestFullscreen();
         }
     </script>
