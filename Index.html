@@ -127,7 +127,9 @@
                                     console.log(L);
                                     console.log(R);
                                     // The slide is moved to 2nd position. Video 2 should be played and others should be paused.
+                                    vid.requestFullscreen();
                                     vid.pause();
+                                    vid2.requestFullscreen();
                                     vid2.play();
                                     L = -1;
                                     R = -1;
@@ -151,7 +153,9 @@
                                 console.log("Swipe Right Not Button");
                                 if (L === -2 && R === 0) {
                                     // The slide is moved to 2 position. Video 2 should be played and others should be paused
+                                    vid2.requestFullscreen();
                                     vid2.play();
+                                    vid3.requestFullscreen();
                                     vid3.pause();
                                     L = -1;
                                     R = -1;
@@ -159,8 +163,9 @@
                                 else if (L === -1 && R === -1) {
 
                                     // The slide is moved to 1 position. Video 1 should be played and others should be paused.
-
+                                    vid.requestFullscreen();
                                     vid.play();
+                                    vid2.requestFullscreen();
                                     vid2.pause();
 
                                     L = 0;
