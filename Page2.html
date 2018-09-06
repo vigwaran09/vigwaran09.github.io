@@ -32,7 +32,8 @@
                 </div>
                 <div class="modal-body">
                     <p>Website designed for landscape mode.</p>
-                    <form></form>
+                    <form>
+                    </form>
                     <button id="savebtn" data-dismiss="modal" onclick="openFullscreen();">OK</button>
                 </div>
             </div>
@@ -53,47 +54,47 @@
                                 <div class="swiper-wrapper">
                                     <div id="slide_one" class="swiper-slide">
                                         <!-- VIDEO -->
-                                        <video id="firstVideo" autoplay muted class="slider-video" width="100%" style="visibility: visible; width: 100%;">
+                                        <video id="firstVideo" autoplay muted class="slider-video" style="visibility: visible; width: 100%;">
                                             <source src="WebM Videos/FFL/CARD 1.webm"
                                                     type='video/webm;codecs="vp8, vorbis"' />
                                         </video>
                                         <!-- END VIDEO -->
                                     </div>
                                     <div id="slide_two" class="swiper-slide">
-                                        <video id="secondVideo" class="slider-video" width="100%" style="visibility: visible; width: 100%;">
-                                            <source src="WebM Videos/FFL/CARD 2.webm" type='video/webm;codecs="vp8, vorbis"'>-=0
+                                        <video id="secondVideo" class="slider-video" style="visibility: visible; width: 100%;">
+                                            <source src="WebM Videos/FFL/CARD 2.webm" type='video/webm;codecs="vp8, vorbis"'>
                                         </video>
                                     </div>
                                     <div id="slide_three" class="swiper-slide">
                                         <!-- VIDEO -->
-                                        <video id="thirdVideo" class="slider-video" width="100%" style="visibility: visible; width: 100%;">
+                                        <video id="thirdVideo" class="slider-video" style="visibility: visible; width: 100%;">
                                             <source src="WebM Videos/FFL/CARD 3.webm" type='video/webm;codecs="vp8, vorbis"'>
                                         </video>
                                         <!-- END VIDEO -->
                                     </div>
                                 </div>
-                                <div id="menu" class="scroller container">
-                                    <button id="close-image1" class="buttonCSS1" onclick="ButtonOneClick()"></button>
-                                    <button id="close-image2" class="buttonCSS2" onclick="ButtonTwoClick()"></button>
-                                    <button id="close-image3" class="buttonCSS3" onclick="ButtonThreeClick()"></button>
-                                    <button id="close-image4" class="buttonCSS4"></button>
-                                    <button id="close-image5" class="buttonCSS5"></button>
-                                    <button id="close-image6" class="buttonCSS6"></button>
-                                    <button id="close-image7" class="buttonCSS7"></button>
-                                    <button id="close-image8" class="buttonCSS8"></button>
-                                    <button id="close-image9" class="buttonCSS9"></button>
-                                    <button id="close-image10" class="buttonCSS10"></button>
-                                    <button id="close-image11" class="buttonCSS11"></button>
-                                    <button id="close-image12" class="buttonCSS12"></button>
-                                    <button id="close-image13" class="buttonCSS13"></button>
-                                    <button id="close-image14" class="buttonCSS14"></button>
-                                    <button id="close-image15" class="buttonCSS15"></button>
-                                    <button id="close-image16" class="buttonCSS16"></button>
-                                    <button id="close-image17" class="buttonCSS17"></button>
-                                    <button id="close-image18" class="buttonCSS18"></button>
-                                    <button id="close-image19" class="buttonCSS19"></button>
-                                    <button id="close-image20" class="buttonCSS20"></button>
-                                </div>
+                            </div>
+                            <div id="menu" class="scroller container">
+                                <button id="close-image1" class="buttonCSS1" onclick="ButtonOneClick()"></button>
+                                <button id="close-image2" class="buttonCSS2" onclick="ButtonTwoClick()"></button>
+                                <button id="close-image3" class="buttonCSS3" onclick="ButtonThreeClick()"></button>
+                                <button id="close-image4" class="buttonCSS4"></button>
+                                <button id="close-image5" class="buttonCSS5"></button>
+                                <button id="close-image6" class="buttonCSS6"></button>
+                                <button id="close-image7" class="buttonCSS7"></button>
+                                <button id="close-image8" class="buttonCSS8"></button>
+                                <button id="close-image9" class="buttonCSS9"></button>
+                                <button id="close-image10" class="buttonCSS10"></button>
+                                <button id="close-image11" class="buttonCSS11"></button>
+                                <button id="close-image12" class="buttonCSS12"></button>
+                                <button id="close-image13" class="buttonCSS13"></button>
+                                <button id="close-image14" class="buttonCSS14"></button>
+                                <button id="close-image15" class="buttonCSS15"></button>
+                                <button id="close-image16" class="buttonCSS16"></button>
+                                <button id="close-image17" class="buttonCSS17"></button>
+                                <button id="close-image18" class="buttonCSS18"></button>
+                                <button id="close-image19" class="buttonCSS19"></button>
+                                <button id="close-image20" class="buttonCSS20"></button>
                             </div>
                         </div>
                         <script>
@@ -190,7 +191,7 @@
     </div>
 
     <script>
-        var elem = document.getElementById('main');
+        var elem = document.getElementById('mainDiv');
         function openFullscreen() {
             console.log("OpenFullscreen");
             //$(document).fullScreen(true);
@@ -198,7 +199,7 @@
             var videoOne = document.getElementById('firstVideo');
             videoOne.play();
             elem.webkitRequestFullscreen();
-
+            
         }
     </script>
 </body>
