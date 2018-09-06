@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        /* Text Overlay */
+        #lab_video_text_overlay h2 {
+            font-size: 4em
+        }
+
+        #lab_video_text_overlay .btn {
+            border-radius: 0;
+            text-transform: uppercase;
+            font-weight: 200;
+        }
+
+        #lab_video_text_overlay .btn-warning {
+            background-color: #F5D328;
+        }
+
+        #lab_video_text_overlay {
+            position: absolute;
+            color: #FFF;
+            width: 100%;
+            top: 25%;
+        }
+
+            #lab_video_text_overlay .container {
+                text-align: center;
+                margin: 0px auto;
+                // background-color: #669900;
+            }
+
+        @media screen and (max-width:991px) {
+            #lab_video_text_wrap {
+                height: 300px;
+            }
+        }
+
+        @media screen and (max-width:650px) {
+            #lab_video_text_wrap {
+                height: 250px;
+            }
+
+            #lab_video_text_overlay h2 {
+                font-size: 2em;
+            }
+
+            #lab_video_text_overlay p {
+                font-size: .9em;
+            }
+        }
+
+        @media only screen and (orientation:portrait) {
+            #container {
+                height: 100vw;
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        }
+
+        @media only screen and (orientation:landscape) {
+            #container {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+
+        /*#menu {
+            display: none;
+        }*/
+
+        .buttonCSS1 {
+            background-image: url(EnocIcons/1.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS2 {
+            background-image: url(EnocIcons/2.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS3 {
+            background-image: url(EnocIcons/3.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS4 {
+            background-image: url(EnocIcons/4.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS5 {
+            background-image: url(EnocIcons/5.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS6 {
+            background-image: url(EnocIcons/6.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS7 {
+            background-image: url(EnocIcons/7.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS8 {
+            background-image: url(EnocIcons/8.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS9 {
+            background-image: url(EnocIcons/9.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS10 {
+            background-image: url(EnocIcons/10.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS11 {
+            background-image: url(EnocIcons/11.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS12 {
+            background-image: url(EnocIcons/12.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS13 {
+            background-image: url(EnocIcons/13.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS14 {
+            background-image: url(EnocIcons/14.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS15 {
+            background-image: url(EnocIcons/15.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS16 {
+            background-image: url(EnocIcons/16.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS17 {
+            background-image: url(EnocIcons/17.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS18 {
+            background-image: url(EnocIcons/18.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS19 {
+            background-image: url(EnocIcons/19.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .buttonCSS20 {
+            background-image: url(EnocIcons/20.png);
+            background-size: 80px 80px;
+            background-color: rgba(255,255,255,0.01);
+            height: 80px;
+            width: 80px;
+            bottom: 0;
+            top: 0;
+            border: none;
+        }
+
+        .menuOverlay {
+            position: fixed;
+            background-image: linear-gradient(to top, rgba(81,167,183,1), rgba(255,255,255,0.01));
+            overflow: auto;
+            white-space: nowrap;
+            height: auto;
+            width: auto;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            z-index: 100;
+            float: bottom;
+        }
+
+        #id01 {
+            display: none;
+        }
+
+        .scroller {
+            width: 300px;
+            height: 100px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .container {
+            position: relative; /*important for the .position() method */
+            height: 100px;
+            width: 770px;
+        }
+
+            .container div {
+                height: 90px;
+                width: 60px;
+                float: left;
+                margin: 5px;
+                background: #39f;
+            }
+    </style>
+    <script>
+        function myFunction() {
+            var vid = document.getElementById('firstVideo');
+            vid.play();
+        }
+
+        function myFunctionScroll() {
+
+        }
+
+        var $scroller = $('.scroller');
+        // assign click handler
+        $('button').on('click', function () {
+            // get the partial id of the div to scroll to
+            var divIdx = $('input').val();
+
+            // retrieve the jquery ref to the div
+            var scrollTo = $('#d' + divIdx)
+                // change its bg
+                .css('background', '#9f3')
+                // retrieve its position relative to its parent
+                .position().left;
+            console.log(scrollTo);
+            // simply update the scroll of the scroller
+            // $('.scroller').scrollLeft(scrollTo); 
+            // use an animation to scroll to the destination
+            $scroller
+                .animate({ 'scrollLeft': scrollTo }, 500);
+        });
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/asvd/dragscroll/master/dragscroll.js"></script>
+</head>
+<body onload="myFunction()">
+    <!-- reference examples at https://www.idangero.us/swiper/demos/#.Vl8kD9-rRHc -->
+    <section id="lab_video_slider">
+        <div>
+            <div class="container-fluid">
+                <div id="tempBody" class="row">
+                    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+                    <!-- Link Swiper's CSS -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/css/swiper.min.css">
+                    <!-- Swiper -->
+                    <div id="main" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div id="slide_one" class="swiper-slide">
+                                <!-- VIDEO -->
+                                <video id="firstVideo" class="slider-video" width="100%" style="visibility: visible; width: 100%;">
+                                    <source src="10 Second Count Down circular timer in green screen (Free for commercial).mp4"
+                                            type='video/webm;codecs="vp8, vorbis"' />
+                                </video>
+                                <!-- END VIDEO -->
+                            </div>
+                            <div id="slide_two" class="swiper-slide">
+                                <video id="secondVideo" class="slider-video" width="100%" style="visibility: visible; width: 100%;">
+                                    <source src="10 Second Count Down circular timer in green screen (Free for commercial).mp4" type="video/mp4">-=0
+                                </video>
+                            </div>
+                            <div id="slide_three" class="swiper-slide">
+                                <!-- VIDEO -->
+                                <video id="thirdVideo" class="slider-video" width="100%" style="visibility: visible; width: 100%;">
+                                    <source src="10 Second Count Down circular timer in green screen (Free for commercial).mp4" type="video/mp4">
+                                </video>
+                                <!-- END VIDEO -->
+                            </div>
+                        </div>
+                        <div id="id01" class="scroller">
+                            <!--<div class="container">-->
+                            <!--<div>-->
+                            <div id="menu" class="container">
+                                <button id="close-image1" class="buttonCSS1"></button>
+                                <button id="close-image2" class="buttonCSS2"></button>
+                                <button id="close-image3" class="buttonCSS3"></button>
+                                <button id="close-image4" class="buttonCSS4"></button>
+                                <button id="close-image5" class="buttonCSS5"></button>
+                                <button id="close-image6" class="buttonCSS6"></button>
+                                <button id="close-image7" class="buttonCSS7"></button>
+                                <button id="close-image8" class="buttonCSS8"></button>
+                                <button id="close-image9" class="buttonCSS9"></button>
+                                <button id="close-image10" class="buttonCSS10"></button>
+                                <button id="close-image11" class="buttonCSS11"></button>
+                                <button id="close-image12" class="buttonCSS12"></button>
+                                <button id="close-image13" class="buttonCSS13"></button>
+                                <button id="close-image14" class="buttonCSS14"></button>
+                                <button id="close-image15" class="buttonCSS15"></button>
+                                <button id="close-image16" class="buttonCSS16"></button>
+                                <button id="close-image17" class="buttonCSS17"></button>
+                                <button id="close-image18" class="buttonCSS18"></button>
+                                <button id="close-image19" class="buttonCSS19"></button>
+                                <button id="close-image20" class="buttonCSS20"></button>
+                            <!--</div>-->
+                            <<!--/div>-->
+                            </div>
+                            <!--<div class="scrollleft" style="float: right; cursor: pointer; margin-bottom: 5px; margin-right: 5px;"></div>-->
+                        </div>
+                    </div>
+                    <!-- Swiper JS -->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/js/swiper.min.js"></script>
+                    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                    <!-- Initialize Swiper -->
+                    <script>
+                        var swiper = new Swiper('.swiper-container', {
+                            //pagination: '.swiper-pagination',
+                            //paginationClickable: true,
+                            //nextButton: '.swiper-button-next',
+                            //prevButton: '.swiper-button-prev',
+                            //spaceBetween: 30,
+                            autoplayDisableOnInteraction: false
+                        });
+                    </script>
+                    <script>
+                        var L = 0;
+                        var R = -2;
+                        var vid = document.getElementById('firstVideo');
+                        var vid2 = document.getElementById('secondVideo');
+                        var vid3 = document.getElementById('thirdVideo');
+                        var myElement = document.getElementById('main');
+                        console.log(myElement);
+                        var mc = new Hammer(myElement);
+                        //enable all directions
+                        mc.get('swipe').set({
+                            direction: Hammer.DIRECTION_ALL,
+                            threshold: 1,
+                            velocity: 0.1
+                        });
+
+                        // To check swipe up gesture
+                        mc.on("swipeup", function (ev) {
+                            console.log("Swipe up");
+                            swiper.lockSwipes();
+                            document.getElementById('id01').style.display = 'block';
+                            //document.getElementById('id01').style.zIndex = 1;
+                        });
+
+                        // To check swipe down gesture
+                        mc.on("swipedown", function (ev) {
+                            console.log("Swipe down");
+                            swiper.unlockSwipes();
+                            document.getElementById('id01').style.display = 'none';
+                            document.getElementById('id01').style.zIndex = 0;
+                        });
+
+                        // To check swipe left gesture
+                        mc.on("swipeleft", function (ev) {
+                            console.log("Swipe Left");
+                            if (ev.target.tagName === "BUTTON") {
+                                document.getElementById('menu').scrollLeft += 100;
+                            }
+                            else {
+                                if (L === 0 && R === -2) {
+                                    // The slide is moved to 2nd position. Video 2 should be played and others should be paused.
+                                    vid.pause();
+                                    vid2.play();
+                                    vid3.pause();
+                                    L = -1;
+                                    R = -1;
+                                }
+                                else if (L === -1 && R === -1) {
+                                    // The slide is moved to 3rd position. Video 3 should be played and others should be paused.
+                                    vid.pause();
+                                    vid2.pause();
+                                    vid3.play();
+                                    L = -2;
+                                    R = 0;
+                                }
+                            }
+                        });
+
+                        // To check swipe right gesture
+                        mc.on("swiperight", function (ev) {
+                            if (ev.target.tagName === "BUTTON") {
+                                document.getElementById('menu').scrollLeft -= 100;
+                            }
+                            else {
+
+                                if (L === -2 && R === 0) {
+                                    // The slide is moved to 2 position. Video 2 should be played and others should be paused
+                                    vid.pause();
+                                    vid2.play();
+                                    vid3.pause();
+                                    L = -1;
+                                    R = -1;
+                                }
+                                else if (L === -1 && R === -1) {
+
+                                    // The slide is moved to 1 position. Video 1 should be played and others should be paused.
+
+                                    vid.play();
+                                    vid2.pause();
+                                    vid3.pause();
+
+                                    L = 0;
+                                    R = -2;
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
